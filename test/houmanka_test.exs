@@ -5,22 +5,22 @@ defmodule HoumankaTest do
 
   @output [
     %{
-      "2019-04-05": nil,
-      "2019-04-12": [
+      1_554_422_400 => nil,
+      1_555_027_200 => [
         %{first_name: "Josh", hours: 2.0, id: 24, last_name: "Proud"},
         %{first_name: "Jane", hours: 1.0, id: 29, last_name: "Smith"}
       ],
-      "2019-04-19": [%{first_name: "Josh", hours: 25.0, id: 24, last_name: "Proud"}],
-      "2019-04-26": [%{first_name: "Josh", hours: 1.0, id: 24, last_name: "Proud"}],
-      "2019-05-03": nil,
-      "2019-05-10": [%{first_name: "Houman", hours: 1.0, id: 29, last_name: "Kargaran"}],
-      "2019-05-17": nil,
-      "2019-05-24": nil,
-      "2019-05-31": nil,
-      "2019-06-07": nil,
-      "2019-06-14": [%{first_name: "Houman", hours: 1.0, id: 29, last_name: "Kargaran"}],
-      "2019-06-21": nil,
-      "2019-06-28": nil
+      1_555_632_000 => [%{first_name: "Josh", hours: 25.0, id: 24, last_name: "Proud"}],
+      1_556_236_800 => [%{first_name: "Josh", hours: 1.0, id: 24, last_name: "Proud"}],
+      1_556_841_600 => nil,
+      1_557_446_400 => [%{first_name: "Houman", hours: 1.0, id: 29, last_name: "Kargaran"}],
+      1_558_051_200 => nil,
+      1_558_656_000 => nil,
+      1_559_260_800 => nil,
+      1_559_865_600 => nil,
+      1_560_470_400 => [%{first_name: "Houman", hours: 1.0, id: 29, last_name: "Kargaran"}],
+      1_561_075_200 => nil,
+      1_561_680_000 => nil
     }
   ]
 

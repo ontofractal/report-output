@@ -5,11 +5,11 @@ defmodule Houmanka do
 
   def prepare_report do
     for weekend <- weekends(), into: Map.new() do
-      last_weekend = Date.add(weekend, -6)
-      range = Date.range(weekend, last_weekend)
+      last_weekend = Timex.shift(weekend, days: -6)
+      date_range = Date.range(weekend, last_weekend)
 
       user_events =
-        for %{finish: f, user: user} <- events(), f in range do
+        for %{finish: f, user: user} <- events(), f in date_range  do
           user
         end
         |> Enum.chunk_by(& &1.id)
@@ -19,7 +19,7 @@ defmodule Houmanka do
         |> Enum.sort_by(& &1.id)
 
       val = if Enum.empty?(user_events), do: nil, else: user_events
-      key = weekend |> Date.to_string() |> String.to_atom()
+      key = Timex.to_unix(weekend)
       {key, val}
     end
     |> List.wrap()
